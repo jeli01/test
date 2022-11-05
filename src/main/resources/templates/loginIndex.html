@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div>
+        안녕하세요. 채팅 프로그램 입니다!
+    </div>
+
+    <form action="/logout" method="post">
+        <button type="submit">로그아웃</button>
+    </form>
+
+    반갑습니다. <span th:text="${member.getName()}"></span>님! 채팅프로그램을 이용하세요.
+
+    <br/><br/><br/><br/>
+    <div>이 프로그램에 가입된 사람들 입니다. 서로 한번 채팅을 해보십시오!</div>
+    <div th:each="mem : ${members}">
+        <form action="/chat/room" method="get">
+            <span th:text="${mem.name}"></span> <button class="button" type="submit">대화하기</button>
+        </form>
+    </div>
+</body>
+</html>
