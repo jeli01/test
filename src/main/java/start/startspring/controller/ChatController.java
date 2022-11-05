@@ -13,6 +13,7 @@ public class ChatController {
     @GetMapping("/chat/room")
     public String showRoom(Model model) {
         model.addAttribute("message","123");
+        System.out.println("123");
         return "chat/room";
     }
 
