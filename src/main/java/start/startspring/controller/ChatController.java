@@ -14,6 +14,7 @@ public class ChatController {
     public String showRoom(Model model) {
         model.addAttribute("message","123");
         System.out.println("123");
+        System.out.println("테스트테스트");
         return "chat/room";
     }
 
